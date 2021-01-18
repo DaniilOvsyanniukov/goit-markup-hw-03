@@ -49,22 +49,12 @@ body{
     letter-spacing: 0.03em;
 }
 
-hr{
-    margin: 0;
-    border: 0;
-    position: absolute;
-    width: 100%;
-    height: 0px;
-    left: 0px;
-    top: 79px;
-    border: 1px solid var(--header-line-color);
-}
-
 li {
     list-style-type: none; 
 }
 
 a {
+    display:block;
     text-decoration: none;
 }
 
@@ -72,7 +62,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
-    padding: 94px 15px;
+    padding: 0 15px;
     /* outline: 2px solid tomato; */
 }
 
@@ -107,12 +97,14 @@ a {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0 0;
+    padding: 0;
 }
 
 /* Шапка */
 .header .container{
-    padding: 0 15px;
+    padding: 0px 15px;
+    border-bottom: 1px solid var(--header-line-color);
+    width: 100%;
 }
 .nav{
     display: flex;
@@ -176,30 +168,27 @@ a {
 /* Контент */
 /* Герой */
 .hero{
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     background-color: var(--footer-background-color);
     color: var(--secondary-text-color);
     text-align: center;
-}
-
-.hero .container{
-    padding-top: 200px;
-    padding-bottom: 200px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .hero .title{
-    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    margin-bottom: 30px;
 
     width: 696px;
-    height: 120px;
+    height: 200px;
 }
 
 .hero h1{
-    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 0;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -224,7 +213,8 @@ a {
 }
 
 /* Приемущества */
-.advantages .container{
+.advantages{
+    padding-top: 94px;
     padding-bottom: 0;
 }
 
@@ -262,6 +252,10 @@ a {
 }
 
 /* Чем мы занимаемся */
+.activity{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .global-title{
     display: block;
     margin-bottom: 50px;
@@ -275,11 +269,12 @@ a {
 .activity .list .item:not(:last-child){
     margin-right: 30px;
     margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 /* Наша команда */
 .team{
+    padding-top: 94px;
+    padding-bottom: 94px;
     background-color: var(--secondary-background-color);
     font-size: 16px;
     line-height: 1.19;
@@ -287,7 +282,7 @@ a {
 }
 
 .team .item{
-        width: calc((100% -90px)/4);
+    width: calc((100% -90px)/4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -318,12 +313,10 @@ a {
 }
 
 /* Подвал */
-.footer .container{
+.footer{
     padding-bottom: 60px;
     padding-top: 60px;
-}
 
-.footer{
     background-color: var(--footer-background-color);
     color: var(--secondary-text-color);
     font-weight: 400;
@@ -359,6 +352,10 @@ a {
 }
 
 /* Контент для portfolio.html */
+.search{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .search .buttons{
     justify-content:center;
     margin-bottom: 50px;
@@ -400,6 +397,10 @@ a {
     justify-content:center;
     display: flex;
     flex-wrap:wrap;
+}
+.portfolio img{
+    min-width: 370px;
+    min-height: 294px;
 }
 .portfolio .item{
     margin-bottom: 30px;
