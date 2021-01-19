@@ -95,7 +95,6 @@ a {
 }
 
 .list{
-    display: flex;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
@@ -103,26 +102,28 @@ a {
 
 /* Шапка */
 .header .container{
+    display: flex;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
     padding: 0px 15px;
     border-bottom: 1px solid var(--header-line-color);
-    width: 100%;
+    width: 1170px;
 }
 
 .nav{
     display: flex;
     align-items: center;
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
 }
 
-.nav .list{
-    margin-right: auto;
+.header .list{
+    display: flex;
 }
 
-.nav .list:last-child{
-    margin-right: 0;
+.header-contacts{
+    margin-left: auto;
 }
 
 .nav .link{
@@ -132,16 +133,16 @@ a {
     color: var(--title-text-color);
 }
 
-.nav .item{
+header .item{
     margin-right: 50px;
 }
 
-.nav .item:last-child{
+header .item:last-child{
     margin-right: 0;
 }
 
-.nav .link:hover, 
-.nav .link:focus{
+header .link:hover, 
+header .link:focus{
     color: var(--accent-color);
 }
 
@@ -230,12 +231,16 @@ a {
     overflow: hidden;
 }
 
-.advantages .list .item{
+.advantages .list{
+    display: flex;
+}
+
+.advantages .item{
     width: calc((100% -90px)/4);
     margin-right: 30px;
 }
 
-.advantages .list .item:last-child{
+.advantages .item:last-child{
     margin-right: 0;
 }
 
@@ -259,6 +264,9 @@ a {
     padding-bottom: 94px;
 }
 
+.activity .list{
+    display: flex;
+}
 .global-title{
     display: block;
     margin-bottom: 50px;
@@ -269,7 +277,7 @@ a {
     text-align: center;
 }
 
-.activity .list .item:not(:last-child){
+.activity .item:not(:last-child){
     margin-right: 30px;
     margin-bottom: 0;
 }
@@ -282,6 +290,9 @@ a {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+}
+.team .list{
+    display: flex;
 }
 
 .team .item{
@@ -337,10 +348,6 @@ a {
     margin-bottom: 9px;
 }
 
-.footer .list{
-    display: inline;
-}
-
 .footer .link{
     color: var(--footer-link-color);
 }
@@ -361,6 +368,7 @@ a {
 }
 
 .search .buttons{
+    display: flex;
     justify-content:center;
     margin-bottom: 50px;
 }
@@ -399,11 +407,12 @@ a {
 }
 
 .portfolio{
+    display: flex;
+    flex-wrap:wrap;
+
     padding: 0;
     margin: 0;
     justify-content:center;
-    display: flex;
-    flex-wrap:wrap;
 }
 
 .portfolio img{
